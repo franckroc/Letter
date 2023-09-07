@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="drag.css">
+    <title>Jeu</title>
+</head>
+<body>
+
+    <section>
+        <div class="droppable" id="dropzone">Zone de dépôt</div>
+        <div class="chrono">Compte à rebours: <span id="tps"></span></div>
+    </section>
+    
+    <section>
+        <div id="dragzone">Zone d'origine</div>
+        <div class="mot"><strong>Mot(s) trouvé(s): </strong><ul id="list"></ul>  </div>
+    </section>
+
+    <button id="start" onclick="getLetters()">Démarrez</button>
+    <button id="btn" onclick="verifyElements()"><strong>Vérifiez !</strong></button>
+
+    <section class="score">
+        <div id="re1">Résultat:<span id="result"></span></div>
+        <p id="re2"> Mon score:<span id="score">0</span></p>
+    </section>
+
+    <div class="best">
+        <div>Meilleur mot:<span id="bestword"></span></div><br/>
+        <div>Meilleur score:<span id="bestscore"></span></div>
+    </div>
+
+    <script type="text/javascript" src="drag.js"></script>
+</body>
+</html>
