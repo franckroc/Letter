@@ -7,3 +7,5 @@ Techno: HTML / CSS / Js
  alors vous gagnez un point.
 
  La ligne Best score , best word - affiche votre meilleur essai dans la session actuelle
+
+ click sur index.html
