@@ -2,6 +2,11 @@ body {
     margin: 20px;
     background-color: lightblue;
 }
+
+:root {
+    --couleur: rgb(0, 84, 211);
+}
+
 .droppable {
     display: flex;
     width: 600px;
@@ -91,3 +96,66 @@ section {
     color: rgb(17, 0, 255);
 }
 
+.wrapper {
+    display: flex;
+    justify-content: right;
+    position: relative;
+    right: 10px;
+    top: -230px;
+    align-items: center;
+}
+
+/* couleur et size I'M
+.wrapper .static {
+    color:rgb(17, 0, 255);
+    font-size: 3rem;
+    font-weight: bolder;
+}  */
+
+/* couleur liste, style et posiion */
+.dynamic li {
+    list-style: none;
+    color: var(--couleur);
+    font-size: 3rem;
+    position: relative;
+    top: 0;
+    font-weight: bolder;
+    animation: scroll 6s steps(3) infinite;
+}
+
+/* animation scroll */
+@keyframes scroll {
+    100% {  
+        top: -270px;
+        color: blue;
+        font-size: 6rem;
+    }        
+}
+
+/* espace entre i'M et mot */
+/* cache liste */
+.wrapper .dynamic {
+    line-height: 90px;
+    margin-left: -30px;
+    height: 90px;
+    overflow: hidden;
+}
+
+/* curseur- couleur,position,  */
+.dynamic li::after {
+    content: "";
+    position:absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid var(--couleur);
+    background-color: lightblue;
+    animation: typing 2s steps(5) infinite;
+}
+
+/* animation curseur */
+@keyframes typing {
+    40%,
+    60% {  left: calc(100%);   }
+    100% { left: 0;  }
+}
