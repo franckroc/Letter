@@ -114,7 +114,7 @@ function verifyElements() {
         if (wordsInFile.includes(word+'\r')) {
             if(!essais.includes(word)) {
                 point+= 1;
-                result.textContent= " Bonne réponse !" ;
+                result.textContent= " Bonne réponse" ;
                 result.style.color= "green";
                 score.textContent= point;
                 essais.push(word);
@@ -123,15 +123,19 @@ function verifyElements() {
                 liste.appendChild(newLi);
                 bestWord(word);
                 bestScore(point);
-            } else { result.textContent= " Mot déjà proposé !";  } 
+                if (essais.length == 4) {
+                    console.log(essais);
+                    drag();
+                }
+            } else { result.textContent= " Déjà proposé";  } 
         } else { 
-            result.textContent= "Mot inconnu !";
+            result.textContent= "Mot inconnu";
             result.style.color= "red";
         }
     })
     .catch(error => {
         console.error(error);
-        result.textContent = "Une erreur s'est produite !";
+        result.textContent = "Erreur !";
     });
     /* suite au click vérifiez */
     eraseDropZone();

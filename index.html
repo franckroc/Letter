@@ -7,10 +7,20 @@
     <title>Jeu</title>
 </head>
 <body>
+<header>
+    <div class="wrapper">
+        <!-- <div class="static">I'm</div> -->
+        <ul class="dynamic">
+            <li><span>Eat</span></li>
+            <li><span>Sleep</span></li>
+            <li><span>Code</span></li>
+        </ul>
+    </div>
+</header>
 
     <section>
         <div class="droppable" id="dropzone">Zone de dépôt</div>
-        <div class="chrono">Compte à rebours: <span id="tps"></span></div>
+        <div class="chrono">Time:<span id="tps"></span></div>
     </section>
     
     <section>
@@ -23,7 +33,7 @@
 
     <section class="score">
         <div id="re1">Résultat:<span id="result"></span></div>
-        <p id="re2"> Mon score:<span id="score">0</span></p>
+        <p id="re2"> Score:<span id="score"></span></p>
     </section>
 
     <div class="best">
@@ -31,14 +41,7 @@
         <div>Meilleur score:<span id="bestscore"></span></div>
     </div>
 
-    <div class="wrapper">
-        <!-- <div class="static">I'm</div> -->
-        <ul class="dynamic">
-            <li><span>Eat</span></li>
-            <li><span>Sleep</span></li>
-            <li><span>Code</span></li>
-        </ul>
-    </div>
+
 
 
     <script type="text/javascript" src="drag.js"></script>

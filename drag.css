@@ -43,7 +43,7 @@ section {
 
 #btn {
     position: absolute;
-    top: 300px;
+    top: 400px;
     left: 250px;
     margin: 20px;
     background-color: yellow;    
@@ -53,7 +53,7 @@ section {
 
 #start {
     position: absolute;
-    top: 250px;
+    top: 350px;
     left: 287px;
     background-color: greenyellow;
 }
@@ -65,28 +65,30 @@ section {
    
 .mot {
     margin-left: 50px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     border: 2px solid black;
     background-color: aquamarine;
+    min-width: 300px;
 }
 
-#re1,
-#re2 { font-size: 2em; }
+/* taille resultat et mon score */
+.score { 
+    display: flex;
+    font-size: 1.5em;
+    position: absolute;
+    top: 650px;
+ }
 
-#re1 {
-    position:absolute;
-    top: 435px;
-    left: 30px;
-}
+ #re2 {
+    padding-left: 480px;
+    position: absolute;
+    top: -25px;
+ }
 
-#re2 {
-    position:absolute;
-    top: 400px;
-    left: 450px;
-}
 .chrono {
-    padding-left: 20px;
-    font-size: 1.2rem;
+    padding-left: 100px;
+    font-size: 2rem;
+    margin: 25px;
 }
 
 .best {
@@ -95,13 +97,14 @@ section {
     font-size: 1.5rem;
     color: rgb(17, 0, 255);
 }
-
+.best span::before {
+    content: "  ";
+}
+/* position du texte */
 .wrapper {
     display: flex;
-    justify-content: right;
+    justify-content: left;
     position: relative;
-    right: 10px;
-    top: -230px;
     align-items: center;
 }
 
@@ -112,6 +115,15 @@ section {
     font-weight: bolder;
 }  */
 
+/* espace entre i'M et mot */
+/* cache liste */
+.wrapper .dynamic {
+    line-height: 90px;
+    margin-left: -30px;
+    height: 90px;
+    overflow: hidden;
+}
+
 /* couleur liste, style et posiion */
 .dynamic li {
     list-style: none;
@@ -120,6 +132,7 @@ section {
     position: relative;
     top: 0;
     font-weight: bolder;
+    user-select: none;
     animation: scroll 6s steps(3) infinite;
 }
 
@@ -128,17 +141,8 @@ section {
     100% {  
         top: -270px;
         color: blue;
-        font-size: 6rem;
+        font-size: 5rem;
     }        
-}
-
-/* espace entre i'M et mot */
-/* cache liste */
-.wrapper .dynamic {
-    line-height: 90px;
-    margin-left: -30px;
-    height: 90px;
-    overflow: hidden;
 }
 
 /* curseur- couleur,position,  */
